@@ -4,9 +4,11 @@
   "description": "Production-oriented REST API built with Node.js and Express",
   "main": "src/server.js",
   "type": "module",
-    "scripts": {
-     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "worker": "node src/workers/notificationWorker.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand"
   },
   "repository": {
     "type": "git",
@@ -20,13 +22,22 @@
   },
   "homepage": "https://github.com/DINESHBABU-KR/nodejs-backend-api#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^6.7.5",
     "cors": "^2.8.6",
     "dotenv": "^18.0.10",
     "express": "^5.3.0",
+    "express-validator": "^7.3.2",
     "helmet": "^8.3.0",
+    "ioredis": "^6.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.12.1",
     "morgan": "^1.12.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "jest": "^30.5.2",
+    "mongodb-memory-server": "^11.3.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.3.2"
   }
 }
