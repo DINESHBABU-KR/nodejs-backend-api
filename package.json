@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-backend-api",
+  "version": "1.0.0",
+  "description": "Production-oriented REST API built with Node.js and Express",
+  "main": "src/server.js",
+  "type": "module",
+    "scripts": {
+     "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DINESHBABU-KR/nodejs-backend-api.git"
+  },
+  "keywords": [],
+  "author": "DineshBabu_KR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DINESHBABU-KR/nodejs-backend-api/issues"
+  },
+  "homepage": "https://github.com/DINESHBABU-KR/nodejs-backend-api#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "morgan": "^1.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
